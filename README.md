@@ -9,9 +9,12 @@ holds no code of its own. It is built from the same shell as
 - The **hub UI** (sign-in screen, shelf with covers, search, sort, filters,
   gear) is loaded by the fixed `index.html` from
   [`eckko/subject-site-template`](https://github.com/eckko/subject-site-template)
-  on jsDelivr, at the version in `subject.json`'s `uiVersion` (`"1"` = newest
-  1.x.x). Change the UI in that repo, never here. A new major version is
+  on jsDelivr, at the version in `subject.json`'s `uiVersion` (`"2"` = newest
+  2.x.x). Change the UI in that repo, never here. A new major version is
   adopted by hand by editing `uiVersion`.
+- This subject's **own look** (the "Terminal" sign-in screen and its icons) is the
+  one UI thing kept here, in `.theme/`, named by `theme` in `subject.json`; the
+  template loads it (UI 2.1.0 or newer).
 - The **book pages** (the gate, the reader and the quiz) load from
   [`eckko/recall-quiz-site-template`](https://github.com/eckko/recall-quiz-site-template)
   on jsDelivr by an exact tag such as `3.2.5` (no `v`, never a branch).
@@ -19,7 +22,9 @@ holds no code of its own. It is built from the same shell as
 
 ```
 index.html          the hub loader (fixed, never edited)
-subject.json        title, templateTag, uiVersion, optional bookDetails
+subject.json        title, templateTag, uiVersion, theme, optional bookDetails
+.theme/             this subject's look: gate.css, terminal.svg, icon.svg,
+                    apple-touch-icon.png (no book content)
 books.json          written by the template's tools/site/build_hub.py
 <book>/             pushed by the private book repo's publish workflow
   index.html  read.html  quiz.html  book.json

@@ -1,5 +1,10 @@
 {
   "title": "Software",
   "templateTag": "3.2.5",
-  "uiVersion": "1"
+  "uiVersion": "2",
+  "theme": {
+    "css": ".theme/gate.css",
+    "icon": ".theme/icon.svg",
+    "appleTouchIcon": ".theme/apple-touch-icon.png"
+  }
 }
