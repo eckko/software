@@ -1,0 +1,22 @@
+/*
+ * Software: sign-in screen "Terminal" (near-black, a terminal window with passing tests and a git push).
+ * Loaded by the subject-site-template UI (2.x) after its own css/hub.css,
+ * named in subject.json "theme". Only variables and the art area are set;
+ * the url() is relative to this file. No book content here.
+ */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+:root {
+  --gate-bg: #0d1117;
+  --gate-fg: #e6edf3;
+  --gate-muted: #a9b8c8;
+  --gate-button-bg: #3fb950;
+  --gate-button-fg: #0d1117;
+  --gate-heading-font: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --gate-focus: #3fb950;
+}
+
+#gate .gate-art {
+  min-height: 42vh;
+  background: url("terminal.svg") center / contain no-repeat;
+}
